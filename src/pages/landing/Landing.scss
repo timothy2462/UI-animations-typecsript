@@ -1,0 +1,129 @@
+@import "../../scss/index.scss";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: $left-bg;
+  .product {
+    position: fixed;
+    width: 37%;
+    object-fit: contain;
+    left: 40%;
+    bottom: -3%;
+    z-index: 99;
+    animation: fly 3s infinite ease-in-out;
+    transition: ease-in-out;
+  }
+  @keyframes fly {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .light-side {
+    background-color: $left-bg;
+    width: 60%;
+    padding-left: 75px;
+    .content {
+      margin-top: 225px;
+      position: relative;
+
+      .cart-section {
+        display: flex;
+        gap: 10px;
+        button {
+          height: 57px;
+          width: 99px;
+          background-color: transparent;
+          border: 2px solid $dark-red;
+          color: $dark-red;
+          font-size: 19px;
+          font-weight: 700;
+        }
+        .cart-box {
+          background-color: $dark-red;
+          @include center-perfect;
+          width: 262px;
+          height: 57px;
+          gap: 10px;
+          div {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+          }
+        }
+      }
+      .stars {
+        display: flex;
+        width: 300px;
+        p {
+          align-self: center;
+          margin-left: 8px;
+          color: $grey;
+          font-size: 16px;
+
+        }
+      }
+      .box {
+        // width: 406px;
+        height: 16px;
+        background-color: $dark-red;
+        top: 45px;
+        left: 0;
+        margin-top: -60px;
+      }
+      h1 {
+        font-size: 52px;
+        color: white;
+        z-index: 99;
+      }
+      p {
+        font-size: 19px;
+        font-weight: 400;
+        color: white;
+        width: 600px;
+      }
+      .price {
+        color: $dark-red;
+        font-size: 52px;
+        font-weight: 900;
+        margin-top: -20px;
+      }
+      .slash {
+        text-decoration: line-through;
+        color: #ffffff;
+        font-size: 22px;
+        margin-top: -53px;
+        font-weight: 600;
+      }
+    }
+  }
+  .dark-side {
+    .mics {
+      float: right;
+      margin-top: 40%;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    width: 40%;
+
+    background-size: contain;
+    position: relative;
+    background: linear-gradient(
+        0deg,
+        rgba(19, 19, 19, 0.95),
+        rgba(19, 19, 19, 0.95)
+      ),
+      url("../../assets/Product.png");
+  }
+}

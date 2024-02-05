@@ -1,0 +1,43 @@
+@import "../../scss/index.scss";
+.nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .search {
+    align-self: center;
+    margin-left: 80px;
+    position: relative;
+    .icon {
+      position: absolute;
+      left: 30px;
+      top: 30%;
+    }
+    input {
+      height: 50px;
+      width: 604px;
+      border-radius: 34px;
+      border: 0;
+      background-color: #131313;
+      padding: 14px 57px;
+      color: #878787;
+      font-weight: 600;
+      font-size: 17px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+  .content {
+    align-self: center;
+    padding-right: 50px;
+  }
+  .logo {
+    width: 245px;
+    height: 116px;
+    background-color: #131313;
+    @include center-perfect;
+  }
+}

@@ -1,0 +1,11 @@
+.showcontent{
+  display: none;
+}
+@media (max-width:768px) {
+  .showcontent{
+    display: block;
+  }
+  .landing{
+    display: none;
+  }
+}
